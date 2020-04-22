@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 export default function Nav() {
   return (
@@ -8,10 +8,12 @@ export default function Nav() {
         <Link to="/login">Login</Link>
       </li>
       <li>
-        <Link to="/Friends">FriendsList</Link>
+        <Link className="add" to="/Friends">
+          FriendsList
+        </Link>
       </li>
       <li>
-        <Link to="/AddFriends/:id">EditFriends</Link>
+        <Link to="/EditFriends/:id"></Link>
       </li>
       <li>
         <Link to="/AddFriends">AddFriends</Link>

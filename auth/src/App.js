@@ -8,6 +8,7 @@ import DeleteFriend from "./components/DeleteFriend";
 import EditFriendForm from "./components/EditFriendForm";
 import FriendsList from "./components/FriendsList";
 import PrivateRoute from "./components/PrivateRoute";
+import "./components/styling.css";
 import Nav from "./components/Nav";
 function App() {
   return (
