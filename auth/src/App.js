@@ -16,7 +16,7 @@ function App() {
         <Nav />
         <Switch>
           <PrivateRoute exact path="/Friends" component={FriendsList} />
-          <PrivateRoute exact path="/EditFriend" component={EditFriendForm} />
+          <PrivateRoute path="/EditFriends/:id" component={EditFriendForm} />
           <PrivateRoute exact path="/AddFriends" component={AddFriendForm} />
           <Route path="/login" component={Login} />
           <Route component={Login} />

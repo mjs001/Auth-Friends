@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Nav from "./Nav";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
+import { useParams } from "react-router-dom";
 import DeleteFriend from "./DeleteFriend";
 function FriendsList(props) {
   const [friends, setFriends] = useState([]);
@@ -24,6 +25,9 @@ function FriendsList(props) {
         setIsLoading(false);
       });
   };
+  const EditFriend = (id) => {
+    props.history.push(`/EditFriends/${id}`);
+  };
   return (
     <div className="box">
       {isloading ? <h2>loading...</h2> : <h2></h2>}
@@ -38,6 +42,13 @@ function FriendsList(props) {
             }}
           >
             X
+          </button>
+          <button
+            onClick={() => {
+              EditFriend(friend.id);
+            }}
+          >
+            edit
           </button>
         </>
       ))}

@@ -11,7 +11,7 @@ export default function Nav() {
         <Link to="/Friends">FriendsList</Link>
       </li>
       <li>
-        <Link to="/EditFriend">EditFriend</Link>
+        <Link to="/AddFriends/:id">EditFriends</Link>
       </li>
       <li>
         <Link to="/AddFriends">AddFriends</Link>
